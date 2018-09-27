@@ -1,2 +1,2 @@
 # What-s-News
-A Small project
+A Big project
