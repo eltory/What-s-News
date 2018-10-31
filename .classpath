@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Server/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/a301d/Desktop/3학년2학기/WhatsNews/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a301d/Desktop/3학년2학기/WhatsNews/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a301d/Desktop/3학년2학기/WhatsNews/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a301d/Desktop/3학년2학기/WhatsNews/lombok.jar"/>
+	<classpathentry kind="output" path="Server/build/classes"/>
+</classpath>
