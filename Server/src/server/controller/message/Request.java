@@ -5,7 +5,6 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-
 public class Request {
 	private String ip; // unboxing 결과 ip
 	private String id; // unboxing 결과 유저 id

@@ -1,23 +1,22 @@
 package server.controller;
 
-/**
- * 
- * @author lsh
- *
- */
 public class Main {
-	private static Processing processing;
 	private static Connection connection;
+	private static Processing processing;
+	private static Main main;
 	
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		main = new Main();
 		processing = new Processing();
 		connection = new Connection();
+		
 		connection.connect();
-		String tmp;
 	}
-
+	
 	public static void deliverToProcess(String request) {
-		System.out.println(request);
 		processing.getRequest(request);
 	}
+
 }

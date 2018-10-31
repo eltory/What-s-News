@@ -61,7 +61,7 @@ class ConnectionWrap implements Runnable {
 		try {
 			System.out.println(i++ + "'s Client Connected");
 			InputStream input = socket.getInputStream();
-			byte[] request = new byte[30];
+			byte[] request = new byte[100];
 			input.read(request);
 			
 			if (request != null) {

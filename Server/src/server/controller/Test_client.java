@@ -17,7 +17,7 @@ public class Test_client {
 		// TODO Auto-generated method stub
 		System.out.println("CLIENT ");
 		try {
-			Socket c_socket = new Socket("WhatsNewsServer.iptime.org", 35001);
+			Socket c_socket = new Socket("http://WhatsNewsServer.iptime.org", 35002);
 			Gson g = new Gson();
 			Request r = new Request();
 			r.setId("2013");
