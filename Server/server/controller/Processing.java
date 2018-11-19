@@ -57,7 +57,6 @@ class thread_cast implements Runnable{
 		this.request = req;
 	}
 	
-	@Override
 	public void run(){
 		try{
 			req = gson.fromJson(request, Request.class);

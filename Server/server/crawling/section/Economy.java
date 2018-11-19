@@ -20,7 +20,6 @@ public class Economy extends Crawler implements Runnable{
    }
    
    
-   @Override
    public void run() {
       try {
          for (String key : sid2.keySet()) {

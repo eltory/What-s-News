@@ -9,10 +9,10 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		main = new Main();
-		processing = new Processing();
+		/*processing = new Processing();
 		connection = new Connection();
 		
-		connection.connect();
+		connection.connect();*/
 	}
 	
 	public static void deliverToProcess(String request) {

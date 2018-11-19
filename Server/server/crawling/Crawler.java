@@ -32,7 +32,6 @@ public class Crawler {
 	    //Society soc = new Society();
 	    //World wor = new World();
 	    //Economy eco = new Economy();
-
 	}
 
 	public void article_read(String major_sub) throws IOException {
@@ -95,7 +94,6 @@ public class Crawler {
 	      n2.setHead_line(head);
 	      n2.setTimes(time);
 	      n2.setData(body);
-	      
 	   }
 	
 	 public News get_news() {
