@@ -19,7 +19,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import server.controller.message.Request;
-import sun.net.www.http.HttpClient;
 
 public class Test_client {
 	public static void main(String[] args) {

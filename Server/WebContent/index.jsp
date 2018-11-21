@@ -1,5 +1,4 @@
-<%@ page import="com.sun.corba.se.spi.activation.Server"
-	import="server.crawling.Crawler"
+<%@ page import="server.crawling.Crawler"
 	import="server.controller.message.News" import="com.google.gson.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>

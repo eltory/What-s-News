@@ -5,7 +5,7 @@
 	<classpathentry exported="true" kind="lib" path="/Users/lsh/Downloads/jsoup-1.11.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/lsh/Downloads/json-simple-1.1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/lsh/Downloads/gson-2.8.5.jar"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.0"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
