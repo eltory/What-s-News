@@ -8,6 +8,7 @@
                         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/"/>
                         
         
         <property name="java-output-path" value="/Server/build/classes"/>
