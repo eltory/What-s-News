@@ -10,7 +10,7 @@ import server.crawling.Crawler;
  */
 
 public class Politics extends Crawler implements Runnable{
-   private static final int SID1 = 100; // Á¤Ä¡
+   private static final int SID1 = 100; // Politics
    private HashMap<String, String> sid2 = new HashMap<String, String>();
    
    public Politics() {

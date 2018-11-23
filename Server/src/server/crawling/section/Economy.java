@@ -10,7 +10,7 @@ import server.crawling.Crawler;
  */
 
 public class Economy extends Crawler implements Runnable{
-   private static final int SID1 = 101; // ∞Ê¡¶
+   private static final int SID1 = 101; // Economy
    private HashMap<String, String> sid2 = new HashMap<String, String>();
    
    public Economy() {

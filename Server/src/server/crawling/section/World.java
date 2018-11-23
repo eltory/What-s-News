@@ -10,7 +10,7 @@ import server.crawling.Crawler;
  */
 
 public class World extends Crawler implements Runnable{
-   private static final int SID1 = 104; // ¼¼°è
+   private static final int SID1 = 104; // World
    private HashMap<String, String> sid2 = new HashMap<String, String>();
    
    public World() {
