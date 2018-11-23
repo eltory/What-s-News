@@ -27,8 +27,8 @@ public class Crawler {
 		System.out.println("Crawler Start... ");
 		// TODO Auto-generated method stub
 		IT it = new IT();
-		Thread t = new Thread(it);
-		t.start();
+/*		Thread t = new Thread(it);
+		t.start();*/
 		System.out.println("IT article: ");
 		
 		//Living liv = new Living();
@@ -60,7 +60,8 @@ public class Crawler {
 			
 			if (!list.contains(ss.replaceAll("&amp;", "&"))) {	
 				list.add(ss.replaceAll("&amp;", "&"));
-				System.out.println(ss);
+				
+				System.out.println(ss); // not replace &amp; -> &.
 				
 				script_process(list.get(i++));
 			}
