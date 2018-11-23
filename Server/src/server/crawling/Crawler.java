@@ -29,7 +29,7 @@ public class Crawler {
 		IT it = new IT();
 		Thread t = new Thread(it);
 		t.start();
-		System.out.println("IT ��ü : ");
+		System.out.println("IT article: ");
 		
 		//Living liv = new Living();
 	    //Politics pol = new Politics();
@@ -44,44 +44,44 @@ public class Crawler {
 		// Search type06 and type06_headline. 
 		boolean exist = false;
 		
-		Elements elem = doc.select("ul.type06");	// exist �� false.
+		Elements elem = doc.select("ul.type06");	
 		//Elements elem2 = doc.select("ul.type06_headline");
 		
-		String s = elem.html();		// type06�� ��ü html.ul�� ��������
+		String s = elem.html();		
 		
 		Pattern p = Pattern.compile("href=\"(.*?)\"");
-		Matcher m = p.matcher(s);	// �̰��� RE�� ���� ��� ����Ʈ (href)�� ����.
+		Matcher m = p.matcher(s);	
 		
 		ArrayList<String> list = new ArrayList<>();
 		int i = 0;
 		
 		while (m.find()) {
-			String ss = m.group().substring(6, m.group().length() - 1);	// <href => �� ������ http link�� ����.
+			String ss = m.group().substring(6, m.group().length() - 1);	
 			
-			if (!list.contains(ss.replaceAll("&amp;", "&"))) {	// & ǥ�� ����.
+			if (!list.contains(ss.replaceAll("&amp;", "&"))) {	
 				list.add(ss.replaceAll("&amp;", "&"));
 				System.out.println(ss);
 				
 				script_process(list.get(i++));
 			}
 		}
-		//return �� array list�� ����? string���� ����?
+	
 	}
 	
-	// String parameter�� article_read���� ���� url.
+	
 	public void script_process(String href_url) throws IOException {
 		Document doc2 = Jsoup.connect(href_url).get();
-		String id = doc2.select("script").html().substring(545, 555); // ���� ���̵�
-	    String head = doc2.select("h3#articleTitle").text(); // ���� Ÿ��Ʋ
-	    String time = doc2.select("span.t11").text(); // ���� �ð�
-	    String body = doc2.select("div#articleBodyContents").text(); // ���� ����
+		String id = doc2.select("script").html().substring(545, 555);
+	    String head = doc2.select("h3#articleTitle").text();
+	    String time = doc2.select("span.t11").text(); 
+	    String body = doc2.select("div#articleBodyContents").text();
 
 //		Elements e = doc2.select("div#articleBodyContents");
 //		String tmp = e.text();
 //		System.out.println(tmp);
 		
 	    set_news(id, head, time, body);
-		// script ���ʿ� ���� ����.
+		
 		
 	}
 	
@@ -103,11 +103,11 @@ public class Crawler {
 	 public News get_news() {
 		 //Gson g = new Gson();
 		 
-		 //System.out.println("JSON ������? " +g.toJson(n2));
+		 //System.out.println("JSON  " +g.toJson(n2));
 	//	 if(n2 != null)
 		//	 return new Gson().toJson(n2);
 		// else
-			// return "NULL�̷�";
+			// return "NULL";
 		 return n2;
 	 }
 	 
