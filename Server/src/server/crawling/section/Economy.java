@@ -12,7 +12,7 @@ import server.crawling.Crawler;
 public class Economy extends Crawler implements Runnable{
    private static final int SID1 = 101; // 경제
    private HashMap<String, String> sid2 = new HashMap<String, String>();
-   //뭐지이건
+   
    public Economy() {
       setSid();
       Thread t = new Thread(this);
