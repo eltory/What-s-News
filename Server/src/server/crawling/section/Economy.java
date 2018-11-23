@@ -31,14 +31,14 @@ public class Economy extends Crawler implements Runnable{
       }
    }
    
-   public void setSid() { 
-      sid2.put("금융", "259");
-      sid2.put("증권", "258");
-      sid2.put("산업/재계", "261");
-      sid2.put("중기/벤처", "771");
-      sid2.put("부동산", "260");
-      sid2.put("글로벌 경제", "262");
-      sid2.put("생활경제", "310");
-      sid2.put("경제 일반", "263");
-   }
+	public void setSid() {
+		sid2.put("Finance", "259");
+		sid2.put("Securities", "258");
+		sid2.put("Industry/Business", "261");
+		sid2.put("Middle/Venture", "771");
+		sid2.put("Estate", "260");
+		sid2.put("GlobalEconomy", "262");
+		sid2.put("LivingEconomy", "310");
+		sid2.put("GeneralEconomy", "263");
+	}
 }

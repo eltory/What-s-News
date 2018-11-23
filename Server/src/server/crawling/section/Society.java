@@ -31,16 +31,16 @@ public class Society extends Crawler implements Runnable{
    }
    
    
-   public void setSid() { 
-      sid2.put("사건사고", "249");
-      sid2.put("교육", "250");
-      sid2.put("노동", "251");
-      sid2.put("언론", "254");
-      sid2.put("환경", "252");
-      sid2.put("인권/복지", "59b");
-      sid2.put("식품/의료", "255");
-      sid2.put("지역", "256");
-      sid2.put("인물", "276");
-      sid2.put("사회 일반", "257");
-   }
+	public void setSid() {
+		sid2.put("Accident", "249");
+		sid2.put("Education", "250");
+		sid2.put("Labor", "251");
+		sid2.put("Press", "254");
+		sid2.put("Environment", "252");
+		sid2.put("HumanRights/Welfare", "59b");
+		sid2.put("Food/Medical", "255");
+		sid2.put("Local", "256");
+		sid2.put("Human", "276");
+		sid2.put("GeneralSocial", "257");
+	}
 }

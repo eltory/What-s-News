@@ -31,11 +31,11 @@ public class World extends Crawler implements Runnable{
    }
    
    
-   public void setSid() { 
-      sid2.put("아시아/호주", "231");
-      sid2.put("미국/중남미", "232");
-      sid2.put("유럽", "233");
-      sid2.put("중동/아프리카", "234");
-      sid2.put("세계 일반", "322");
-   }
+	public void setSid() {
+		sid2.put("Asia/Australia", "231");
+		sid2.put("US/LatinAmerica", "232");
+		sid2.put("Europe", "233");
+		sid2.put("MiddleEast/Africa", "234");
+		sid2.put("GeneralWorld", "322");
+	}
 }

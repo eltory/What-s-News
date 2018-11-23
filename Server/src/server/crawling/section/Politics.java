@@ -30,12 +30,12 @@ public class Politics extends Crawler implements Runnable{
       }
    }
    
-   public void setSid() { 
-      sid2.put("청와대", "264");
-      sid2.put("국회/정당", "265");
-      sid2.put("북한", "268");
-      sid2.put("행정", "266");
-      sid2.put("국방/외교", "267");
-      sid2.put("정치일반", "269");   
-   }
+	public void setSid() {
+		sid2.put("BlueHouse", "264");
+		sid2.put("Assembly/party", "265");
+		sid2.put("NorthKorea", "268");
+		sid2.put("Administrative", "266");
+		sid2.put("Defense/Diplomacy", "267");
+		sid2.put("GeneralPolitics", "269");
+	}
 }
