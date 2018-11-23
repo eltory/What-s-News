@@ -24,15 +24,18 @@ public class Crawler {
 	public News n2 = new News();
 	
 	public static void main(String[] args) {
+		System.out.println("Crawler Start... ");
 		// TODO Auto-generated method stub
 		IT it = new IT();
-		System.out.println("IT °´Ã¼ : ");
+		Thread t = new Thread(it);
+		t.start();
+		System.out.println("IT ï¿½ï¿½Ã¼ : ");
+		
 		//Living liv = new Living();
 	    //Politics pol = new Politics();
 	    //Society soc = new Society();
 	    //World wor = new World();
 	    //Economy eco = new Economy();
-
 	}
 
 	public void article_read(String major_sub) throws IOException {
@@ -41,44 +44,44 @@ public class Crawler {
 		// Search type06 and type06_headline. 
 		boolean exist = false;
 		
-		Elements elem = doc.select("ul.type06");	// exist °¡ false.
+		Elements elem = doc.select("ul.type06");	// exist ï¿½ï¿½ false.
 		//Elements elem2 = doc.select("ul.type06_headline");
 		
-		String s = elem.html();		// type06ÀÇ ÀüÃ¼ html.ulÀ» °¡Á®¿À°í
+		String s = elem.html();		// type06ï¿½ï¿½ ï¿½ï¿½Ã¼ html.ulï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		
 		Pattern p = Pattern.compile("href=\"(.*?)\"");
-		Matcher m = p.matcher(s);	// ÀÌ°ÍÀ» RE¸¦ ÅëÇØ ±â»ç ¸®½ºÆ® (href)¸¸ ÃßÃâ.
+		Matcher m = p.matcher(s);	// ï¿½Ì°ï¿½ï¿½ï¿½ REï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® (href)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 		
 		ArrayList<String> list = new ArrayList<>();
 		int i = 0;
 		
 		while (m.find()) {
-			String ss = m.group().substring(6, m.group().length() - 1);	// <href => À» Á¦¿ÜÇÑ http link¸¸ ÃßÃâ.
+			String ss = m.group().substring(6, m.group().length() - 1);	// <href => ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ http linkï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 			
-			if (!list.contains(ss.replaceAll("&amp;", "&"))) {	// & Ç¥½Ã Á¦°Å.
+			if (!list.contains(ss.replaceAll("&amp;", "&"))) {	// & Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 				list.add(ss.replaceAll("&amp;", "&"));
 				System.out.println(ss);
 				
 				script_process(list.get(i++));
 			}
 		}
-		//return À» array list·Î ÇÒÁö? stringÀ¸·Î ÇÒÁö?
+		//return ï¿½ï¿½ array listï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½? stringï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½?
 	}
 	
-	// String parameter´Â article_read¿¡¼­ ÀÐÀº url.
+	// String parameterï¿½ï¿½ article_readï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ url.
 	public void script_process(String href_url) throws IOException {
 		Document doc2 = Jsoup.connect(href_url).get();
-		String id = doc2.select("script").html().substring(545, 555); // ´º½º ¾ÆÀÌµð
-	    String head = doc2.select("h3#articleTitle").text(); // ´º½º Å¸ÀÌÆ²
-	    String time = doc2.select("span.t11").text(); // ´º½º ½Ã°£
-	    String body = doc2.select("div#articleBodyContents").text(); // ´º½º º»¹®
+		String id = doc2.select("script").html().substring(545, 555); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½
+	    String head = doc2.select("h3#articleTitle").text(); // ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½Æ²
+	    String time = doc2.select("span.t11").text(); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+	    String body = doc2.select("div#articleBodyContents").text(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 //		Elements e = doc2.select("div#articleBodyContents");
 //		String tmp = e.text();
 //		System.out.println(tmp);
 		
 	    set_news(id, head, time, body);
-		// script ºÒÇÊ¿ä ³»¿ë Á¦°Å.
+		// script ï¿½ï¿½ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 		
 	}
 	
@@ -95,17 +98,16 @@ public class Crawler {
 	      n2.setHead_line(head);
 	      n2.setTimes(time);
 	      n2.setData(body);
-	      
 	   }
 	
 	 public News get_news() {
 		 //Gson g = new Gson();
 		 
-		 //System.out.println("JSON ³ª¿À´Ï? " +g.toJson(n2));
+		 //System.out.println("JSON ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½? " +g.toJson(n2));
 	//	 if(n2 != null)
 		//	 return new Gson().toJson(n2);
 		// else
-			// return "NULLÀÌ·¡";
+			// return "NULLï¿½Ì·ï¿½";
 		 return n2;
 	 }
 	 

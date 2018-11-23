@@ -9,36 +9,39 @@ import server.crawling.Crawler;
  * @author a301d
  */
 
-public class IT extends Crawler implements Runnable{
-   private static final int SID1 = 105; // IT,°úÇĞ
-   private HashMap<String, String> sid2 = new HashMap<String, String>();
-   
-   public IT() {
-      setSid();
-      Thread t = new Thread(this);
-      t.start();
-   }
-   
-   @Override
-   public void run() {
-      try {
-         for (String key : sid2.keySet()) {
-            super.article_read(root + "&sid1=" + SID1 + "&sid2=" + sid2.get(key));
-         }
-      } catch(IOException e) {
-         e.printStackTrace();
-      }
-   }
-   
-   public void setSid() { 
-      sid2.put("¸ğ¹ÙÀÏ", "731");
-      sid2.put("ÀÎÅÍ³İ/SNS", "226");
-      sid2.put("Åë½Å/´º¹Ìµğ¾î", "227");
-      sid2.put("IT ÀÏ¹İ", "230");
-      sid2.put("º¸¾È/ÇØÅ·", "732");
-      sid2.put("ÄÄÇ»ÅÍ", "283");
-      sid2.put("°ÔÀÓ/¸®ºä", "229");
-      sid2.put("°úÇĞ ÀÏ¹İ", "228");
-   }
-}
+public class IT extends Crawler implements Runnable {
+	private static final int SID1 = 105; // IT,ï¿½ï¿½ï¿½ï¿½
+	private HashMap<String, String> sid2 = new HashMap<String, String>();
 
+	public IT() {
+		setSid();
+	
+	}
+
+	@Override
+	public void run() {
+		try {
+			synchronized (this) {
+				//for (String key : sid2.keySet()) {
+				{
+					System.out.println("ì§„");
+					super.article_read(root + "&sid1=" + SID1 + "&sid2=" + sid2.get("IT ì¼ë°˜"));
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void setSid() {
+		sid2.put("ï¿½ï¿½ï¿½ï¿½ï¿½", "731");
+		sid2.put("ï¿½ï¿½ï¿½Í³ï¿½/SNS", "226");
+		sid2.put("ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½Ìµï¿½ï¿½", "227");
+		sid2.put("IT ì¼ë°˜", "230");
+		sid2.put("ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½Å·", "732");
+		sid2.put("ï¿½ï¿½Ç»ï¿½ï¿½", "283");
+		sid2.put("ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½", "229");
+		sid2.put("ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¹ï¿½", "228");
+	}
+}
