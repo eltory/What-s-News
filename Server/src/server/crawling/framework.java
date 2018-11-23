@@ -19,14 +19,14 @@ public class framework {
 		sid_major = new HashMap<String, String>();
 		sid_sub = new HashMap<String, String>();
 		
-		// Hash set을 여기서 하는게 맞는지 모르겠음.
+		// Hash set?.
 		//setSid();
 	}
 	
 	public void setSid() {      
 	      /* 
-	       * 네이버 뉴스
-	       * sid1 -> major: 대분류
+	       * Naver News
+	       * sid1 -> major: Major Category
 	       * sid2 -> sub: 소분류
 	       */
 	      sid_major.put("정치", "100"); 
