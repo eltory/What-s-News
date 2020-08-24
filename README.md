@@ -9,7 +9,7 @@ Description
 사용자에게 제공되는 news들은 위젯의 형식으로 제공하며, Naver에서 등록되는 모든 기사를 단순히 제공해주는 것이 아닌, 동일한 주제의 기사는 filtering하여 전달해준다.
 
 
-WorkFlow
+Architecture
 ====
 
 <img width="960" alt="1" src="https://user-images.githubusercontent.com/20057558/47263926-3a756800-d546-11e8-96fb-8441eb0a96e1.png">
